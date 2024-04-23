@@ -1,0 +1,116 @@
+<!DOCTYPE html> 
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alexander.info</title>
+  <style>
+    html, body { 
+      margin: 0;
+      padding: 0;
+      color: white;
+      background-color: black;
+    }
+  
+   h1 {
+      text-align: center;
+      color: orange; /* Imposta il colore del testo su arancione */
+    }
+    
+    h1 { 
+      text-align: center;
+    }
+    
+    p {
+      margin-top: 20px;
+      font-size: 20px;
+      text-align: center;
+    }
+    
+    img {
+      width: 50%;
+      display: block;
+      margin: auto;
+      max-width: 450px;
+    }
+    
+    .video-container {
+      width: 90%; /* Ridimensiona il video a metà della larghezza della finestra */
+      margin: auto;
+      border: 2px solid orange; /* Aggiunge un bordo di 2px di spessore di colore arancione */
+      border-radius: 10px; /* Aggiunge un bordo arrotondato */
+      overflow: hidden; /* Nasconde eventuali bordi aggiuntivi dell'iframe */
+    }
+    
+    .video-container iframe {
+      width: 100%; /* Imposta la larghezza dell'iframe al 100% del contenitore */
+      height: 56.25vw; /* Proporzione 16:9 */
+      border: none; /* Rimuove eventuali bordi dell'iframe */
+    }
+    
+    .copyright {
+      text-align: center;
+      font-size: 12px; /* Imposta la dimensione del carattere a 12px */
+    }
+    
+    background-image: url('https://www.publicdomainpictures.net/pictures/200000/velka/hand-with-eye.jpg');
+    background-size: contain; /* Ridimensiona l'immagine per adattarsi all'area del body */
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 20px;
+  </style>
+</head>
+<body>
+  <h1>ALEXANDER INTRATTENITORE DEL MISTERO</h1>
+  <img src="https://www.publicdomainpictures.net/pictures/200000/velka/hand-with-eye.jpg" alt="descrizione dell'immagine">
+  <p>Alexander è un essere misterioso che ama stupire il suo pubblico,
+    attraverso dimostrazioni ai limiti del paranormale.</p>
+  <p><span style="color: orange;">Ma chi è un intrattenitore del mistero?</span></p>
+  <p>Un intrattenitore del mistero è colui che si avvale della capacità di ognuno
+      di noi, di creare miracoli 
+      attraverso il potere della
+      <span style="color: orange;">TUA MENTE.</span></p>
+  <p>Per generare un mix di emozioni che ti lasceranno a <span style="color: orange;">BOCCA APERTA.</span></p>  
+   <p>Come intrattenitore, posso adattarmi
+      a diverse situazioni lavorative,
+      tra cui: ristoranti, pub,
+      eventi aziendali e feste private.</p>
+      <p>Il mio intrattenimento
+      è adatto solo ed esclusivamente
+      per un PUBBLICO AUDULTO.</p>
+      <h1>IPNOSI</h1>
+  <div class="video-container">
+    <iframe src="https://www.youtube.com/embed/0MSBSrSTmRA" frameborder="0" allowfullscreen></iframe>
+  </div>
+  <p>Per contattarmi, compila il form che trovi qui sotto.</p>
+     <form onsubmit="inviaEmail(event)" style="margin-top: 20px;">
+  <label for="nome" style="display: block; color: orange;">Nome:</label>
+  <input type="text" id="nome" name="nome" required style="width: 100%; padding: 5px;">
+  
+  <label for="email" style="display: block; color: orange; margin-top: 10px;">Email:</label>
+  <input type="email" id="email" name="email" required style="width: 100%; padding: 5px;">
+  
+  <label for="messaggio" style="display: block; color: orange; margin-top: 10px;">Messaggio:</label>
+  <textarea id="messaggio" name="messaggio" rows="4" maxlength="300" required style="width: 100%; padding: 5px;"></textarea>
+  
+  <input type="submit" value="Invia" style="margin-top: 10px; background-color: orange; color: black; padding: 8px 20px; border: none; cursor: pointer;">
+</form>
+<script>
+function inviaEmail(event) {
+  event.preventDefault();
+  
+  var nome = document.getElementById("nome").value;
+  var email = document.getElementById("email").value;
+  var messaggio = document.getElementById("messaggio").value;
+  var oggetto = "Nuovo messaggio dal form di contatto";
+  var corpo = "Nome: " + nome + "%0A" + 
+              "Email: " + email + "%0A" + 
+              "Messaggio: " + messaggio;
+  
+  window.location.href = "mailto:manueldalleva@outlook.it?subject=" + encodeURIComponent(oggetto) + "&body=" + encodeURIComponent(corpo);
+}
+</script>
+  <p class="copyright">&copy; 2024 Tutti i diritti sono riservati.</p>
+      
+</body>
+</html>
